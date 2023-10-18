@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask Chess</title>
+</head>
+<body>
+    <h1>Flask Chess</h1>
+    <div>
+        <form action="/move" method="post">
+            <label for="move">Enter your move (e.g., e2e4):</label>
+            <input type="text" id="move" name="move" required>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <div>
+        {{ board }}
+    </div>
+</body>
+</html>

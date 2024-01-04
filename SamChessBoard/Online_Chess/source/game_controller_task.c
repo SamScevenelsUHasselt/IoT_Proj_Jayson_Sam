@@ -241,7 +241,6 @@ bool handle_my_turn(struct piece board[8][8], char fenCode[100], enum color *myC
 		}
 	}
 	//update board with move
-	//CASTLE AND EN PASSENT LOGIC !!!!!!!!
 	board[moves.movelist[movelistIndex].dest_x][moves.movelist[movelistIndex].dest_y] = board[original_cords.x][original_cords.y];
 	board[original_cords.x][original_cords.y] = (struct piece) {Empty,None};
 
@@ -331,7 +330,6 @@ bool handle_opponent_turn(struct piece board[8][8], enum color myColor, bool *ch
 			}
 		}
 	}
-	//CASTLE AND EN PASSENT LOGIC !!!!!!!!
 	board[chess_msg.to_x][chess_msg.to_y] = board[chess_msg.from_x][chess_msg.from_y];
 	board[chess_msg.from_x][chess_msg.from_y] = (struct piece) {Empty,None};
 
